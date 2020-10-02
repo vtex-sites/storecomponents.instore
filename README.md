@@ -18,7 +18,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
     ```shell
     # Clone this repo into your machine
-    git clone my-awesome-store https://github.com/vtex-sites/storecomponents.store.git
+    git clone my-awesome-store https://github.com/vtex-sites/storecomponents.instore.git
     ```
 
 1.  **Install dependencies**
