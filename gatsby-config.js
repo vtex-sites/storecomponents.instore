@@ -4,10 +4,10 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://faststore.netlify.app/',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
@@ -16,7 +16,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: require.resolve('@vtex/gatsby-theme-vtex'),
+      resolve: require.resolve('@vtex/gatsby-theme-instore'),
       options: {
         title: 'Store Theme - VTEX Base Store',
         description: 'A sample store using the best of Gatsby and VTEX',
@@ -25,7 +25,7 @@ module.exports = {
           messagesPath: './i18n/messages',
           locales: ['en', 'pt'],
           defaultLocale: 'en',
-        }
+        },
       },
     },
     {
@@ -54,17 +54,17 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: [{ userAgent: '*' }],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
+            host: null,
           },
         },
       },
@@ -102,10 +102,14 @@ module.exports = {
             'Referrer-Policy: same-origin',
           ]
           return path.includes('/preview')
-            ? [...DEFAULT_SECURITY_HEADERS, 'Content-Security-Policy: frame-src https://*.myvtex.com/', ...headers]
+            ? [
+                ...DEFAULT_SECURITY_HEADERS,
+                'Content-Security-Policy: frame-src https://*.myvtex.com/',
+                ...headers,
+              ]
             : ['X-Frame-Options: DENY', ...DEFAULT_SECURITY_HEADERS, ...headers]
         },
-      }
+      },
     },
   ],
 }

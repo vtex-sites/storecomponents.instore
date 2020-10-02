@@ -1,5 +1,5 @@
 {
-  "name": "storecomponents.store",
+  "name": "storecomponents.instore",
   "private": true,
   "version": "0.0.0",
   "dependencies": {
