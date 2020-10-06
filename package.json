@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "dependencies": {
     "@vtex/gatsby-plugin-graphql": "^0.68.0",
+    "@vtex/gatsby-plugin-theme-ui": "^0.81.0",
     "@vtex/gatsby-plugin-vtex-nginx": "^0.68.0",
-    "@vtex/gatsby-theme-vtex": "^0.68.0",
+    "@vtex/gatsby-source-vtex": "^0.82.0",
     "@vtex/store-ui": "^0.68.0",
     "babel-preset-gatsby": "^0.5.5",
     "gatsby": "^2.24.64",
@@ -14,7 +15,8 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-source-filesystem": "^2.3.23",
     "react": "^0.0.0-experimental-7f28234f8",
-    "react-dom": "^0.0.0-experimental-7f28234f8"
+    "react-dom": "^0.0.0-experimental-7f28234f8",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@vtex/lighthouse-config": "^0.67.0",
