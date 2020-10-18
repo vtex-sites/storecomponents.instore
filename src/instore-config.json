@@ -2,6 +2,9 @@
   "components": [
     {
       "name": "Header"
+    },
+    {
+      "name": "Identification"
     }
   ]
 }
