@@ -4,10 +4,8 @@ type HeaderProps = {
   title: string
 }
 
-export const Header: FC<HeaderProps> = ({ title }) => {
-  return (
-    <header>
-      <div>{title}</div>
-    </header>
-  )
-}
+export const Header: FC<HeaderProps> = ({ title }) => (
+  <header>
+    <div>{title}</div>
+  </header>
+)
