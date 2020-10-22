@@ -34,7 +34,7 @@ class CPFInput extends React.Component<Props> {
         errorMessage="Invalid CPF"
         invalidInputMessage="Invalid CPF number"
         initialValue={clearMask(data.document)}
-        shouldDisableButton={(v: string) => !isValidCPF(v)}
+        // shouldDisableButton={(v: string) => !isValidCPF(v)}
         {...rest}
       />
     )
